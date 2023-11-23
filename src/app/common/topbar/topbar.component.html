@@ -1,0 +1,190 @@
+<div class="flex w-full bg-white border-b border-mirage-200 justify-between">
+
+    <!-- left section -->
+    <div class="flex">
+
+        <div class="p-3 flex gap-x-2 items-center justify-center border-e border-mirage-200 w-[60px]">
+            <div class="flex flex-col items-center justify-center">
+                <div class="flex items-center gap-2">
+                    <ion-icon class="text-4xl rounded-md" src="../assets/logo/logo-bg.svg"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-4 flex gap-x-2 py-3 items-center justify-center">
+
+            <div class="relative w-full flex items-center gap-2 justify-start">
+                <button type="button" [matMenuTriggerFor]="Profile"
+                    class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-royal-blue-200 focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <span class="absolute -inset-1.5"></span>
+                    <img class="h-8 w-8 rounded-full object-cover border border-mirage-200"
+                        src="../../../assets/img/avtar.png" alt="">
+                </button>
+                <div class="flex flex-col">
+                    <span class="text-xs text-black font-medium">Amjad raza</span>
+                    <span class="text-[10px] text-mirage-400">Company Owner</span>
+                </div>
+            </div>
+
+            <!-- Profile menu -->
+            <mat-menu #Profile="matMenu" class="popover left">
+                <div (click)="$event.stopPropagation()">
+                    <div
+                        class="relative w-full flex items-center gap-2 justify-start p-2 cursor-pointer border-b border-mirage-100">
+                        <button type="button"
+                            class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-royal-blue-200 focus:ring-offset-2 focus:ring-offset-gray-800">
+                            <span class="absolute -inset-1.5"></span>
+                            <img class="h-8 w-8 rounded-full object-cover border border-mirage-200"
+                                src="../../../assets/img/avtar.png" alt="">
+                        </button>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-black font-medium">Amjad raza</span>
+                            <span class="text-[10px] text-mirage-400">Company Owner</span>
+                        </div>
+                    </div>
+                    <div *ngFor="let p of ProfileMenu"
+                        class="relative w-full flex items-center gap-2 justify-start p-2 cursor-pointer">
+                        <lord-icon [src]="p.iconsrc" [colors]="p.color" trigger="hover" target="div"
+                            style="width:20px;height:20px">
+                        </lord-icon>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-black font-medium">{{p.name}}</span>
+                        </div>
+                    </div>
+                    <div
+                        class="relative w-full flex items-center gap-2 justify-start p-2 border-t cursor-pointer border-mirage-100">
+                        <ion-icon name="log-out-outline" class="text-lg text-red-600"></ion-icon>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-red-600 font-medium">Logout</span>
+                        </div>
+                        <span class="text-[10px] text-fiord-500 font-medium ms-auto">V 0.0.1</span>
+                    </div>
+                </div>
+            </mat-menu>
+        </div>
+    </div>
+
+
+    <!-- Right section -->
+    <div class="flex px-4 gap-x-2 py-2 items-center justify-center">
+        <div class="relative w-full flex justify-center">
+            <button (click)="openMessage()" mat-icon-button
+                class="!w-[35px] !h-[35px] !leading-3 flex items-center justify-center gap-2 !rounded-md ">
+                <lord-icon src="https://cdn.lordicon.com/fdxqrdfe.json" trigger="hover" target="button"
+                    style="width:23px;height:23px" stroke="bold">
+                </lord-icon>
+            </button>
+        </div>
+        <div class="relative w-full flex justify-center">
+            <button  mat-icon-button [matMenuTriggerFor]="notification"
+                class="!w-[35px] !h-[35px] !leading-3 flex items-center justify-center gap-2 !rounded-md ">
+                <lord-icon src="https://cdn.lordicon.com/vspbqszr.json" trigger="hover" target="button"
+                    style="width:23px;height:23px" stroke="bold">
+                </lord-icon>
+            </button>
+            <!-- Notification menu -->
+            <mat-menu #notification="matMenu" class="popover right">
+                <header class="relative w-full flex items-center gap-2 justify-start p-2 cursor-pointer ">
+                    <div class="flex flex-col">
+                        <span class="text-base text-black font-medium">Notification</span>
+                        <span class="text-[10px] text-mirage-400">Lorem, ipsum dolor sit amet consectetur
+                            adipisicing elit.</span>
+                    </div>
+                </header>
+                <div (click)="$event.stopPropagation()">
+                    <mat-tab-group mat-align-tabs="start">
+                        <mat-tab label="All">
+                            <div class="max-h-[calc(100vh_-_438px)]">
+                                <div
+                                    class="relative w-full flex items-start gap-2 justify-start p-2 cursor-pointer border-b border-mirage-100">
+                                    <div type="button" class="relative flex rounded-full bg-gray-800 text-sm">
+                                        <img class="h-8 w-8 rounded-full object-cover border border-mirage-200"
+                                            src="../../../assets/img/avtar.png" alt="">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-xs text-black">
+                                            <span class="font-medium">Amjad raza</span> update a profile
+                                        </span>
+                                        <span class="text-[10px] text-mirage-400">2h ago . Employee</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="relative w-full flex items-strat gap-2 justify-start p-2 cursor-pointer border-b border-mirage-100">
+                                    <div type="button"
+                                        class="relative flex rounded-full bg-gray-800 text-sm flex-shrink-0 flex-grow-0">
+                                        <img class="h-8 w-8 rounded-full object-cover border border-mirage-200"
+                                            src="../../../assets/img/avtar.png" alt="">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-xs text-black">
+                                            <span class="font-medium">Amjad raza</span> is requesting to upgrade
+                                            Schedule
+                                        </span>
+                                        <span class="text-[10px] text-mirage-400">2h ago . Schedule management</span>
+                                        <div class="flex items-center gap-2 pt-2">
+                                            <button
+                                                class="hover:bg-blue-400 group flex items-center rounded-md bg-blue-500 text-white text-[10px] font-medium px-2 py-1 shadow-sm">
+                                                Accept
+                                            </button>
+                                            <button
+                                                class=" group flex items-center rounded-md border border-fiord-600 text-fiord-600 text-[10px] font-medium px-2 py-1 shadow-sm">
+                                                Decline
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="relative w-full flex items-start gap-2 justify-start p-2 cursor-pointer border-b border-mirage-100">
+                                    <div type="button" class="relative flex rounded-full bg-gray-800 text-sm">
+                                        <img class="h-8 w-8 rounded-full object-cover border border-mirage-200"
+                                            src="../../../assets/img/avtar.png" alt="">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-xs text-black">
+                                            <span class="font-medium">Amjad raza</span> update a profile
+                                        </span>
+                                        <span class="text-[10px] text-mirage-400">2h ago . Employee</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-tab>
+
+                        <mat-tab label="Following">
+                            <div class="max-h-[calc(100vh_-_438px)]">
+                                <!-- Empty state -->
+                                <div class="relative w-full flex flex-col items-center gap-3 justify-start p-10">
+                                    <div type="button" class="relative flex rounded-full bg-gray-800 text-sm">
+                                        <ion-icon src="../../../assets/img/empty.svg" class="text-8xl"></ion-icon>
+                                    </div>
+                                    <div class="flex flex-col text-center gap-2">
+                                        <span class="text-xs text-black font-medium">No Notifications</span>
+                                        <span class="text-[10px] text-mirage-400">Lorem ipsum dolor sit, amet
+                                            consectetur <br> adipisicing elit. Delectus, itaque.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-tab>
+
+                        <mat-tab label="Archive">
+                            <div class="max-h-[calc(100vh_-_245px)]">
+                                <div *ngFor="let x of [1,2,3,4,5,6,7,8,9,10,11,12,13]"
+                                    class="relative w-full flex items-center gap-2 justify-start p-2 cursor-pointer border-b border-mirage-100">
+                                    <div type="button" class="relative flex rounded-full bg-gray-800 text-sm">
+                                        <img class="h-8 w-8 rounded-full object-cover border border-mirage-200"
+                                            src="../../../assets/img/avtar.png" alt="">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-xs text-black font-medium">Amjad raza</span>
+                                        <span class="text-[10px] text-mirage-400">Company Owner</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-tab>
+                    </mat-tab-group>
+                </div>
+            </mat-menu>
+
+        </div>
+    </div>
+
+</div>
