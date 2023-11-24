@@ -253,3 +253,19 @@ body {
   border-radius: 10px !important;
   // @apply
 }
+
+.mat-slide-toggle-bar {
+  width: 45px !important;
+  height: 25px !important;
+  border-radius: 15px !important;
+}
+
+.mat-slide-toggle-thumb-container {
+  top: 2px !important;
+  left: 3px !important;
+}
+
+.mat-slide-toggle-label {
+  flex-direction: row-reverse !important;
+  justify-content: space-between !important;
+}

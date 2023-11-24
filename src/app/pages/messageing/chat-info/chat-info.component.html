@@ -1,4 +1,4 @@
-<div class="border-e border-s border-fiord-200">
+<div class="">
     <div class="max-h-[calc(100vh_-_62px)] overflow-auto ">
 
         <header
@@ -13,7 +13,8 @@
             </button>
         </header>
 
-        <div class="p-5 py-1">
+        <div class="p-5 py-1 flex flex-col gap-2">
+
             <div class="flex justify-between text-fiord-400 text-xs">
                 <div class="flex items-center gap-2">
                     <!-- <ion-icon name="pin"></ion-icon> -->
@@ -29,6 +30,177 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora sunt eius reprehenderit
                 dolor! Numquam vero obcaecati quia praesentium assumenda omnis fugit ratione inventore libero?
             </div>
+
+            <div class="flex items-center gap-3 justify-between py-2 pb-5 border-b border-fiord-200">
+
+                <div class="text-sm font-semibold">
+                    @Design_Chat
+                </div>
+
+                <div class="ps-2 flex items-center gap-1 text-xs font-medium text-blue-600">
+                    <ion-icon class="text-sm" name="link"></ion-icon>
+                    Copy link
+                </div>
+
+            </div>
+
+            <div mat-ripple
+                class="bg-white rounded-xl relative w-full flex items-center gap-2 p-3 px-4 my-3 cursor-pointer justify-between">
+                <!-- <div class="text-base font-medium">
+                        Notifications
+                    </div> -->
+                <div class="flex flex-col gap-1 ms-auto w-full">
+                    <mat-slide-toggle color="primary" class="w-full">
+                        <div class="text-base font-medium">
+                            Notifications
+                        </div>
+                    </mat-slide-toggle>
+                </div>
+            </div>
+
+            <div class="flex-shrink-0 group block py-4">
+                <div class="flex items-center flex-col gap-3">
+                    <!-- <img class="inline-block flex-shrink-0 h-[4.875rem] w-[4.875rem] rounded-full"
+                        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                        alt="Image Description" /> -->
+                    <div
+                        class="relative flex-shrink-0 h-[6rem] w-[6rem] rounded-full object-cover text-white bg-gradient-to-r from-blue-400 to-blue-600 border-2 border-blue-200 flex items-center justify-center">
+                        <span class="text-3xl font-semibold tracking-wider">DC</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-semibold text-gray-800 dark:text-white">Design Chat</h3>
+                        <p class="text-xs font-medium text-fiord-500">28 member</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 justify-center">
+                <div class="flex p-5 rounded-xl items-center gap-2 bg-white w-full">
+                    <ion-icon class="text-sm bg-fiord-50 p-2 rounded-full text-orange-500"
+                        name="document-text"></ion-icon>
+                    <span class="text-xl font-semibold">189</span>
+                </div>
+                <div class="flex p-5 rounded-xl items-center gap-2 bg-white w-full">
+                    <ion-icon class="text-sm bg-fiord-50 p-2 rounded-full text-orange-500" name="link"></ion-icon>
+                    <span class="text-xl font-semibold">189</span>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="p-2 flex justify-between text-fiord-400 text-xs">
+                    <div class="flex items-center gap-2">
+                        <ion-icon name="person"></ion-icon>
+                        <div class="flex gap-2 items-center">
+                            <span>Members</span>
+                            <span class="text-xs font-semibold text-fiord-800">(28)</span>
+                        </div>
+                    </div>
+                    <ion-icon name="ellipsis-horizontal"></ion-icon>
+                </div>
+                <div mat-ripple *ngFor="let x of [1,2,3]"
+                    class="hover:bg-white rounded-lg relative w-full flex items-center gap-2 justify-start p-2 my-1 cursor-pointer">
+                    <div
+                        class="relative flex-shrink-0 h-10 w-10 rounded-full object-cover text-white bg-blue-500 border-2 border-blue-200 flex items-center justify-center">
+                        <span class="text-sm font-normal">MS</span>
+                    </div>
+                    <div class="flex flex-col gap-1 w-full">
+                        <div class="flex items-center justify-between gap-1 w-full">
+                            <span class="text-sm text-black font-medium line-clamp-1 w-full">Mohammed Shabuddin</span>
+                            <!-- <span class="text-[10px] text-mirage-400">5:29</span> -->
+                        </div>
+                    </div>
+                    <div class="flex items-center !ms-auto">
+                        <button mat-icon-button
+                            class=" text-fiord-300 hover:text-blue-500 transition-all ease-in-out duration-200">
+                            <ion-icon name="call" class="text-lg"></ion-icon>
+                        </button>
+                        <button mat-icon-button
+                            class=" text-fiord-300 hover:text-blue-500 transition-all ease-in-out duration-200">
+                            <ion-icon name="chatbubble-ellipses" class="text-lg"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="p-2 flex justify-between text-fiord-400 text-xs">
+                    <div class="flex items-center gap-2">
+                        <ion-icon name="star"></ion-icon>
+                        <div class="flex gap-2 items-center">
+                            <span>File Type</span>
+                            <span class="text-xs font-semibold text-fiord-800">(192)</span>
+                        </div>
+                    </div>
+                    <ion-icon name="ellipsis-horizontal"></ion-icon>
+                </div>
+
+                <div mat-ripple
+                    class="hover:bg-white rounded-lg relative w-full flex items-center gap-3 justify-start p-2 my-1 cursor-pointer">
+                    <div class="p-3 flex items-center justify-center bg-white rounded-lg">
+                        <ion-icon name="camera" class="text-xl text-blue-500"></ion-icon>
+                    </div>
+                    <div class="flex flex-col gap-1 w-full">
+                        <div class="flex items-center justify-between gap-1">
+                            <span class="text-sm text-black font-medium ">Photos</span>
+                        </div>
+                        <div class=" text-mirage-400 flex items-center gap-1 justify-between">
+                            <div class="text-[10px] flex items-center gap-2">
+                                <span>78 files . 416mb</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button mat-icon-button
+                        class="bg-white me-2 text-fiord-300 hover:text-blue-500 transition-all ease-in-out duration-200 !h-6 !w-6 !flex !items-center !justify-center">
+                        <ion-icon name="chevron-forward" class="text-lg"></ion-icon>
+                    </button>
+                </div>
+                
+
+                <div mat-ripple
+                    class="hover:bg-white rounded-lg relative w-full flex items-center gap-3 justify-start p-2 my-1 cursor-pointer">
+                    <div class="p-3 flex items-center justify-center bg-white rounded-lg">
+                        <ion-icon name="videocam" class="text-xl text-orange-600"></ion-icon>
+                    </div>
+                    <div class="flex flex-col gap-1 w-full">
+                        <div class="flex items-center justify-between gap-1">
+                            <span class="text-sm text-black font-medium ">Videos</span>
+                        </div>
+                        <div class=" text-mirage-400 flex items-center gap-1 justify-between">
+                            <div class="text-[10px] flex items-center gap-2">
+                                <span>78 files . 416mb</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button mat-icon-button
+                        class="bg-white me-2 text-fiord-300 hover:text-blue-500 transition-all ease-in-out duration-200 !h-6 !w-6 !flex !items-center !justify-center">
+                        <ion-icon name="chevron-forward" class="text-lg"></ion-icon>
+                    </button>
+                </div>
+
+                <div mat-ripple
+                    class="hover:bg-white rounded-lg relative w-full flex items-center gap-3 justify-start p-2 my-1 cursor-pointer">
+                    <div class="p-3 flex items-center justify-center bg-white rounded-lg">
+                        <ion-icon name="document-text" class="text-xl text-shamrock-600"></ion-icon>
+                    </div>
+                    <div class="flex flex-col gap-1 w-full">
+                        <div class="flex items-center justify-between gap-1">
+                            <span class="text-sm text-black font-medium ">Other</span>
+                        </div>
+                        <div class=" text-mirage-400 flex items-center gap-1 justify-between">
+                            <div class="text-[10px] flex items-center gap-2">
+                                <span>78 files . 416mb</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button mat-icon-button
+                        class="bg-white me-2 text-fiord-300 hover:text-blue-500 transition-all ease-in-out duration-200 !h-6 !w-6 !flex !items-center !justify-center">
+                        <ion-icon name="chevron-forward" class="text-lg"></ion-icon>
+                    </button>
+                </div>
+
+            </div>
+
+
         </div>
     </div>
 </div>

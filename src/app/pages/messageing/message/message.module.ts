@@ -8,7 +8,7 @@ import { ChatInfoComponent } from '../chat-info/chat-info.component';
 import { ChatListComponent } from '../chat-list/chat-list.component';
 import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
-
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   imports: [
     CommonModule,
-    MessageRoutingModule,MatRippleModule,MatButtonModule
+    MessageRoutingModule,MatRippleModule,MatButtonModule,MatSlideToggleModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
