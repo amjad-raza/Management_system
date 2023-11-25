@@ -20,7 +20,7 @@
                         <!-- <div *ngIf="item.active == true" class="absolute text-royal-blue-600 text-2xl translate-y-[30%] -left-2">
                             <ion-icon name="caret-forward-outline"></ion-icon>
                         </div> -->
-                        <button [ngClass]="item.active == true ? 'text-royal-blue-600 opacity-100' : 'opacity-50'"
+                        <button  [routerLink]="[item.url]" [ngClass]="item.active == true ? 'text-royal-blue-600 opacity-100' : 'opacity-50'"
                             mat-icon-button class="flex items-center gap-2 px-3 py-1 bg-gray-50 !rounded-md">
                             <!------------ if ion-iocn ------------>
                             <!-- <ion-icon [ngClass]="item.active == true ? 'scale-110' : ''"

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   openSideNav: boolean = true;
   title = 'management_website';
+  constructor(public route: Router) {
+
+  }
 
   Sidemenu: any = [
     {
@@ -51,6 +55,11 @@ export class AppComponent {
       active: false,
     },
   ]
+
+  opnePage(item: any) {
+    this.route.navigate(['item.url'])
+  }
+
 }
 
 

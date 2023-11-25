@@ -1,7 +1,182 @@
 <main>
-    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 ">
-        <div class="h-screen bg-white p-3 border border-fiord-100 shadow-md rounded-md ">
-            Your content
+    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 p-4 ">
+        <div class="h-screen  grid grid-cols-12 gap-6 content-baseline">
+            <!-- Heading & Current time -->
+            <div class="col-span-12 h-fit flex justify-between items-center">
+                <div>
+                    <h1 class="text-xl font-medium">Good afternoon, Amjad Raza!</h1>
+                    <span class="text-xs font-medium text-fiord-400 tracking-wide">You have 12 tasks pending.</span>
+                </div>
+                <div class="bg-white px-3 py-1 border border-fiord-100 rounded-lg h-full flex items-center gap-4">
+                    <div>
+                        <span class="text-xs font-medium text-fiord-300 tracking-wide">Current time</span>
+                        <h1 class="text-xl font-medium">{{currentTime | date:'hh:mm a'}}</h1>
+                    </div>
+                    <!-- src="https://cdn.lordicon.com/mwikjdwh.json" -->
+                    <lord-icon src="https://cdn.lordicon.com/kgdqzapd.json" trigger="loop" state="loop-clock"
+                        colors="primary:#545454" style="width:35px;height:35px">
+                    </lord-icon>
+                </div>
+            </div>
+
+            <div class="col-span-8 grid grid-cols-12 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white col-span-6 border border-fiord-100 rounded-lg overflow-hidden">
+                    <header class="p-3 border-b border-fiord-100 flex items-center justify-between w-full">
+                        <div class="text-base font-medium text-fiord-900">Attendance</div>
+                        <div class="text-sm font-medium text-blue-500 cursor-pointer">View Stats</div>
+                    </header>
+                    <div class="p-3 flex items-start  justify-between">
+                        <div class="flex flex-col gap-4">
+                            <!-- 1 -->
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-2 w-2 relative">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="text-sm font-semibold tracking-wider">1,031</span>
+                                    <span class="text-xs font-medium text-fiord-400">on time</span>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-2 w-2 relative">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="text-sm font-semibold tracking-wider">403</span>
+                                    <span class="text-xs font-medium text-fiord-400">late attendance</span>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-2 w-2 relative">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-fiord-600 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-fiord-600"></span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="text-sm font-semibold tracking-wider">66 note present</span>
+                                    <span class="text-xs font-medium text-fiord-400">on time</span>
+                                </div>
+                            </div>
+                            <!-- 4 -->
+                            <div class="flex items-center gap-3 border-s-2 border-blue-500 px-3 py-1">
+                                <span class="text-sm font-medium text-fiord-500">12% more then Wednesday</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center pe-4" x-data="{ circumference: 2 * 20 / 7 * 120 }">
+                            <svg class="w-[120px] h-[125px]">
+                                <circle class="text-fiord-100" stroke-width="1" stroke="currentColor" fill="transparent"
+                                    r="42" cx="60" cy="60" />
+                                <circle class="text-fiord-100" stroke-width="10" stroke="currentColor"
+                                    fill="transparent" r="50" cx="60" cy="60" />
+                                <circle class="text-blue-400" stroke-width="10" :stroke-dasharray="120"
+                                    :stroke-dashoffset="120 - 25 / 100 * 120" stroke-linecap="round"
+                                    stroke="currentColor" fill="transparent" r="50" cx="60" cy="60" />
+                            </svg>
+                            <!-- x-text="`${percent}%`" -->
+                            <div class="absolute text-center flex flex-col">
+                                <span class="text-xl font-medium text-fiord-900">1,434</span>
+                                <span class="text-xs text-fiord-500 ">/1500</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white col-span-6 border border-fiord-100 rounded-lg overflow-hidden">
+                    <header class="p-3 border-b border-fiord-100 flex items-center justify-between w-full">
+                        <div class="text-base font-medium text-fiord-900">Document status</div>
+                        <div class="text-sm font-medium text-blue-500 cursor-pointer">View Stats</div>
+                    </header>
+                    <div class="p-3 flex items-start  justify-between">
+
+                        <div class="flex flex-col gap-4">
+                            <!-- 1 -->
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-2 w-2 relative">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="text-sm font-semibold tracking-wider">221</span>
+                                    <span class="text-xs font-medium text-fiord-400">signed by all</span>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-2 w-2 relative">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-fiord-600 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-fiord-600"></span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="text-sm font-semibold tracking-wider">23</span>
+                                    <span class="text-xs font-medium text-fiord-400">documents unsigned by all</span>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-2 w-2 relative">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="text-sm font-semibold tracking-wider">149</span>
+                                    <span class="text-xs font-medium text-fiord-400">user have not signed</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="flex items-center justify-center pe-4" x-data="{ circumference: 2 * 20 / 7 * 120 }">
+                            <svg class="w-[120px] h-[125px]">
+                                <circle class="text-green-100" stroke-width="1" stroke="currentColor" fill="transparent"
+                                    r="42" cx="60" cy="60" />
+                                <circle class="text-green-100" stroke-width="10" stroke="currentColor"
+                                    fill="transparent" r="50" cx="60" cy="60" />
+                                <circle class="text-green-600" stroke-width="10" :stroke-dasharray="120"
+                                    :stroke-dashoffset="120 - 25 / 100 * 120" stroke-linecap="round"
+                                    stroke="currentColor" fill="transparent" r="50" cx="60" cy="60" />
+                            </svg>
+                            <!-- x-text="`${percent}%`" -->
+                            <div class="absolute text-center flex flex-col">
+                                <span class="text-xl font-medium text-fiord-900">1,434</span>
+                                <span class="text-xs text-fiord-500 ">/1500</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-span-4 grid grid-cols-12 gap-6">
+                <!-- card 1 -->
+                <div class="bg-white col-span-12 border border-fiord-100 rounded-lg overflow-hidden">
+                    <header class="p-3 border-b border-fiord-100 flex items-center justify-between w-full">
+                        <div class="text-base font-medium text-fiord-900">Checklist</div>
+                        <span
+                            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-red-500 text-white">
+                            12 Pending
+                        </span>
+                    </header>
+                    <div class="p-3 flex items-start  justify-between">
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
     </div>
 </main>
