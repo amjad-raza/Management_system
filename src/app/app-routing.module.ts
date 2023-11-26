@@ -4,7 +4,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'message', loadChildren: () => import('./pages/messageing/message/message.module').then(m => m.MessageModule) }
+  { path: 'message', loadChildren: () => import('./pages/messageing/message/message.module').then(m => m.MessageModule) },
+  { path: 'stafflist', loadChildren: () => import('./pages/staff/staff-list/staff-list.module').then(m => m.StaffListModule) }
 ];
 
 @NgModule({

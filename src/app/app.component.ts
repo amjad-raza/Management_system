@@ -25,7 +25,7 @@ export class AppComponent {
     {
       name: 'Users',
       icon: 'people',
-      url: 'users',
+      url: 'stafflist',
       iconsrc: 'https://cdn.lordicon.com/kthelypq.json',
       selected: 'https://cdn.lordicon.com/hrjifpbq.json',
       active: false,
