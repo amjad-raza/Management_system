@@ -269,3 +269,20 @@ body {
   flex-direction: row-reverse !important;
   justify-content: space-between !important;
 }
+
+.mat-table {
+  border-collapse: separate !important;
+  border-spacing: 0 10px !important;
+}
+
+.data-table {
+  .mat-sort-header-arrow {
+    color: white;
+  }
+  th {
+    @apply bg-blue-500 text-white first:rounded-s-xl last:rounded-e-xl;
+  }
+  td {
+    @apply first:rounded-s-xl last:rounded-e-xl text-xs text-fiord-800;
+  }
+}

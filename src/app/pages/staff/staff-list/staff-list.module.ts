@@ -12,6 +12,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatRippleModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatSortModule,
     MatTableModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatRippleModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
