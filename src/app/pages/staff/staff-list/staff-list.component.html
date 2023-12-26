@@ -53,9 +53,18 @@
                 <table mat-table [dataSource]="dataSource" matSort class="w-full bg-transparent data-table -mt-[12px]">
 
                     <!-- Name Column -->
+                    <ng-container matColumnDef="Check">
+                        <th mat-header-cell *matHeaderCellDef class="">
+                            <mat-checkbox></mat-checkbox>
+                        </th>
+                        <td mat-cell *matCellDef="let row" class="">
+                            <mat-checkbox></mat-checkbox>
+                        </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
                     <ng-container matColumnDef="name">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header
-                            class=""> Name </th>
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header class=""> Name </th>
                         <td mat-cell *matCellDef="let row" class="">
                             <div class="flex items-center gap-x-3">
                                 <img class="inline-block h-[2rem] w-[2rem] rounded-full"
@@ -114,9 +123,9 @@
 
                     <!-- Action Column -->
                     <ng-container matColumnDef="action">
-                        <th mat-header-cell *matHeaderCellDef mat-sort-header class=""> Action</th>
+                        <th mat-header-cell *matHeaderCellDef class="action-btn"> Action</th>
                         <td mat-cell *matCellDef="let row" class="">
-                            <div class="flex items-center gap-1">
+                            <div class="flex items-center gap-1 justify-end">
                                 <button mat-icon-button
                                     class="!rounded-lg bg-white !h-9 !w-9 text-fiord-300 hover:text-blue-500 transition-all ease-in-out duration-200 !flex items-center justify-center">
                                     <ion-icon name="eye" class="text-base"></ion-icon>
@@ -133,7 +142,8 @@
                         </td>
                     </ng-container>
 
-                    <tr class="!h-12 shadow-sm !rounded-xl shadow-blue-200 bg-transparent" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr class="!h-12 shadow-sm !rounded-xl shadow-blue-200 bg-transparent" mat-header-row
+                        *matHeaderRowDef="displayedColumns"></tr>
                     <!-- hover:bg-blue-500 -->
                     <tr class="!rounded-xl bg-white hover:shadow-sm hover:shadow-blue-200 !hover:text-white transition ease-in-out duration-200 cursor-pointer"
                         mat-row *matRowDef="let row; columns: displayedColumns;">
@@ -141,7 +151,19 @@
 
                     <!-- Row shown when there is no matching data. -->
                     <tr class="mat-row" *matNoDataRow>
-                        <td class="mat-cell" colspan="6">No data matching the filter "{{input.value}}"</td>
+                        <td class="mat-cell !border-0" colspan="6">
+                            <div class="relative w-full flex flex-col items-center gap-3 justify-start py-32">
+                                <div type="button" class="relative flex rounded-full bg-gray-800 text-sm">
+                                    <ion-icon src="../../../../assets/img/empty.svg" class="text-8xl"></ion-icon>
+                                </div>
+                                <div class="flex flex-col text-center gap-2">
+                                    <span class="text-xs text-black font-medium">No Notifications</span>
+                                    <span class="text-[10px] text-mirage-400">Lorem ipsum dolor sit, amet
+                                        consectetur <br> adipisicing elit. Delectus, itaque.</span>
+                                </div>
+                            </div>
+                        </td>
+                        <!-- <td class="mat-cell" colspan="6">No data matching the filter "{{input.value}}"</td> -->
                     </tr>
                 </table>
 

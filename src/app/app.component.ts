@@ -10,6 +10,9 @@ export class AppComponent {
   openSideNav: boolean = true;
   title = 'management_website';
   constructor(public route: Router) {
+    if(window.innerWidth == 360){
+      this.openSideNav = false;
+    }
 
   }
 

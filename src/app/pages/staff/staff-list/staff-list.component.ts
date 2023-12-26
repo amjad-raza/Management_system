@@ -17,7 +17,7 @@ export interface UserData {
 })
 export class StaffListComponent implements OnInit {
 
-  displayedColumns: string[] = ['name', 'email', 'phoneNo', 'status','createDate','action'];
+  displayedColumns: string[] = ['Check', 'name', 'email', 'phoneNo', 'status', 'createDate', 'action'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator | any;

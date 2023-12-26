@@ -13,7 +13,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatRippleModule } from '@angular/material/core';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,8 @@ import { MatRippleModule } from '@angular/material/core';
     MatTableModule,
     MatInputModule,
     MatFormFieldModule,
-    MatRippleModule
+    MatRippleModule,
+    MatCheckboxModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
